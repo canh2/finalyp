@@ -64,9 +64,9 @@
                                 <div class="product-cart-wrap mb-30">
                                     <div class="product-img-action-wrap">
                                         <div class="product-img product-img-zoom">
-                                            <a href="product-details.html">
-                                                <img class="default-img" src="{{asset('assetsassets/imgs/shop/product')}} {{$product->id}}-1.jpg')" alt="{{$product->name}}">
-                                                <img class="hover-img"  src="{{asset('assets/imgs/shop/product-')}} {{$product->id}}-2.jpg')}}" alt="{{$product->name}}">
+                                            <a href="{{route('product.details',['slug'=>$product->slug])}}">
+                                                <img class="default-img" src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="{{$product->name}}">
+                                                <img class="hover-img"  src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="{{$product->name}}">
                                             </a>
                                         </div>
                                         <div class="product-action-1">
@@ -90,11 +90,11 @@
                                             </span>
                                         </div>
                                         <div class="product-price">
-                                            <span>$238.85 </span>
-                                            <span class="old-price">{{$product->price}}</span>
+                                            <span>{{$product->sale_price}} </span>
+                                          {{--  <span class="old-price">{{$product->price}}</span> --}}
                                         </div>
                                         <div class="product-action-1 show">
-                                            <a aria-label="Add To Cart" class="action-btn hover-up" href="shop-cart.php"><i class="fi-rs-shopping-bag-add"></i></a>
+                                         <a button="Add To Cart" class="action-btn hover-up" href="#" wire:click.prevent="store( {{$product->id}},'{{$product->name}}',{{$product->sale_price}} )"><i class="fi-rs-shopping-bag-add"></i></a>
                                         </div>
                                     </div>
                                 </div>
