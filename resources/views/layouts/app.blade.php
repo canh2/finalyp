@@ -81,12 +81,7 @@
                      @livewire('header-search-component')
                         <div class="header-action-right">
                             <div class="header-action-2">
-                                <div class="header-action-icon-2">
-                                    <a href="shop-wishlist.php">
-                                        <img class="svgInject" alt="Surfside Media" src="{{asset('assets/imgs/theme/icons/icon-heart.svg')}}">
-                                        <span class="pro-count blue">4</span>
-                                    </a>
-                                </div>
+                               @livewire('wishlist-icon-component')
                                         @livewire('cart-icon-component')
                                 </div>
                             </div>
@@ -348,15 +343,16 @@
                                     </li>
                                     <li><a href="blog.html">Blog </a></li>
                                     <li><a href="contact.html">Contact</a></li>
+                                     @auth
                                     <li><a href="#">My Account<i class="fi-rs-angle-down"></i></a>
-                                        @auth
+
                                         @if(Auth::user()->utype=='ADM')
 
                                         <ul class="sub-menu">
                                             <li><a href="{{route('admin.dashboard')}}">Dashboard</a></li>
 
                                             <li><a href="#">Products</a></li>
-                                            <li><a href="#">Categories</a></li>
+                                            <li><a href="{{route('admin.categories')}}">Categories</a></li>
                                             <li><a href="#">Coupons</a></li>
                                             <li><a href="#">Orders</a></li>
                                             <li><a href="#">Customers</a></li>
@@ -368,8 +364,9 @@
 
                                         </ul>
                                         @endif
-                                        @endauth
+
                                     </li>
+                                      @endif
                                 </ul>
                             </nav>
                         </div>

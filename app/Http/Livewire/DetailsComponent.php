@@ -13,13 +13,11 @@ class DetailsComponent extends Component
     {
         $this->slug= $slug;
     }
-    public function store($product_id,$product_name,$product_price){
-
-            throw new \InvalidArgumentException($product_price);
-
-        Cart::add($product_id,$product_name,$product_price)->associate('App\Models\Product');
-        session()->flash('success_message','Item added to cart');
-        return redirect()->route('shop.cart');
+    public function store($product_id,$product_name,$product_price)
+    {
+         Cart::instance('cart')->add($product_id,$product_name,$product_price,1)->associate('App\Models\Product');
+         session()->flash('success_message','Item added to cart');
+         return redirect()->route('shop.cart');
     }
     public function render()
     {
