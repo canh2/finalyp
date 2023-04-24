@@ -18,7 +18,7 @@ class AdminAddProductComponent extends Component
     public $description;
     public $sale_price;
     // public $discounted_price;
-    public $sku;
+   public $sku;
     public $stock_status= 'instock';
     public $featured = 0;
     public $quantity;
@@ -37,7 +37,7 @@ class AdminAddProductComponent extends Component
             'description'=>'required',
             'sale_price'=>'required',
             // 'discounted_price'=>'required',
-            'sku'=>'required',
+           'sku'=>'required',
             'stock_status'=>'required',
             'featured'=>'required',
             'quantity'=>'required',

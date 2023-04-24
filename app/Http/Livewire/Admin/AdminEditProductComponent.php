@@ -53,7 +53,7 @@ class AdminEditProductComponent extends Component
             'description'=>'required',
             'sale_price'=>'required',
             // 'discounted_price'=>'required',
-            'sku'=>'required',
+           // 'sku'=>'required',
             'stock_status'=>'required',
             'featured'=>'required',
             'quantity'=>'required',

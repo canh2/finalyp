@@ -2,7 +2,7 @@
     <<link rel="shortcut icon" type="image/x-icon" href="{{asset('assets/imgs/theme/favicon.ico')}}">
 <link rel="stylesheet" href="{{asset('assets/css/main.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/custom.css')}}">
-    <main class="main">
+    {{-- <main class="main">
         <section class="home-slider position-relative pt-50">
             <div class="hero-slider-1 dot-style-1 dot-style-1-position-1">
                 <div class="single-hero-slider single-animation-wrap">
@@ -14,7 +14,7 @@
                                     <h2 class="animated fw-900">Supper value deals</h2>
                                     <h1 class="animated fw-900 text-brand">On all products</h1>
                                     <p class="animated">Save more with coupons & up to 70% off</p>
-                                    <a class="animated btn btn-brush btn-brush-3" href="product-details.html"> Shop Now </a>
+                                    <a class="animated btn btn-brush btn-brush-3" href="{{route('shop')}}"> Shop Now </a>
                                 </div>
                             </div>
                             <div class="col-lg-7 col-md-6">
@@ -48,7 +48,7 @@
             </div>
             <div class="slider-arrow hero-slider-1-arrow"></div>
         </section>
-        <section class="featured section-padding position-relative">
+        {{-- <section class="featured section-padding position-relative">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-2 col-md-4 mb-md-3 mb-lg-0">
@@ -90,7 +90,7 @@
                 </div>
             </div>
         </section>
-        <section class="product-tabs section-padding position-relative wow fadeIn animated">
+         <section class="product-tabs section-padding position-relative wow fadeIn animated">
             <div class="bg-square"></div>
             <div class="container">
                 <div class="tab-header">
@@ -108,7 +108,7 @@
                     <a href="#" class="view-more d-none d-md-flex">View More<i class="fi-rs-angle-double-small-right"></i></a>
                 </div>
                 <!--End nav-tabs-->
-                <div class="tab-content wow fadeIn animated" id="myTabContent">
+                {{-- <div class="tab-content wow fadeIn animated" id="myTabContent">
                     <div class="tab-pane fade show active" id="tab-one" role="tabpanel" aria-labelledby="tab-one">
                         <div class="row product-grid-4">
                             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6 col-6">
@@ -1027,11 +1027,11 @@
                         <!--End product-grid-4-->
                     </div>
                     <!--En tab three (New added)-->
-                </div>
+                </div> --}}
                 <!--End tab-content-->
             </div>
-        </section>
-        <section class="banner-2 section-padding pb-0">
+        {{-- </section> --}}
+        {{-- <section class="banner-2 section-padding pb-0">
             <div class="container">
                 <div class="banner-img banner-big wow fadeIn animated f-none">
                     <img src="assets/imgs/banner/banner-4.png" alt="">
@@ -1137,7 +1137,7 @@
                 </div>
             </div>
         </section>
-        <section class="section-padding">
+        {{-- <section class="section-padding">
             <div class="container wow fadeIn animated">
                 <h3 class="section-title mb-20"><span>New</span> Arrivals</h3>
                 <div class="carausel-6-columns-cover position-relative">
@@ -1392,8 +1392,8 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
 
-    </main>
+    {{-- </main> --}}
 
 </div>
