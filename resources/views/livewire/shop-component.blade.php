@@ -29,7 +29,7 @@
     <div class="page-header breadcrumb-wrap">
         <div class="container">
             <div class="breadcrumb">
-                <a href="{route('home.index')}}" rel="nofollow">Home</a>
+                <a href="{{route('home.index')}}" rel="nofollow">Home</a>
                 <span></span> Shop
             </div>
         </div>
@@ -99,8 +99,8 @@
                                 <div class="product-img-action-wrap">
                                     <div class="product-img product-img-zoom">
                                         <a href="{{route('product.details',['slug'=>$product->slug])}}">
-                                            <img class="default-img" src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-1.jpg" alt="{{$product->name}}">
-                                            <img class="hover-img"  src="{{asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="{{$product->name}}">
+                                            <img class="default-img" src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="{{$product->name}}">
+                                            <img class="hover-img"  src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="{{$product->name}}">
                                         </a>
                                     </div>
                                     <div class="product-action-1">

@@ -3,7 +3,7 @@
         <div class="page-header breadcrumb-wrap">
             <div class="container">
                 <div class="breadcrumb">
-                    <a href="index.html" rel="nofollow">Home</a>
+                    <a href="/" rel="nofollow">Home</a>
                     <span></span> Fashion
                     <span></span> Abstract Print Patchwork Dress
                 </div>
@@ -21,7 +21,7 @@
                                         <!-- MAIN SLIDES -->
                                         <div class="product-image-slider">
                                             <figure class="border-radius-10">
-                                                <img src=" {{ asset('assets/imgs/shop/product-')}}{{$product->id}}-2.jpg" alt="product image">
+                                                <img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="product image">
                                             </figure>
                                             <figure class="border-radius-10">
                                                 <img src=" {{ asset('assets/imgs/shop/product-16-1.jpg')}}" alt="product image">

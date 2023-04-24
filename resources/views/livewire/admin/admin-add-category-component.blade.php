@@ -47,7 +47,7 @@
                                       @enderror
                                    </div>
                                     <div class="mb-3 mt-3">
-                                          <label for="name" class="form-label">slug</label>
+                                          <label for="slug" class="form-label">slug</label>
                                           <input type="text"  name="slug" class="form-control" placeholder="Enter Category slug"  wire:model="slug" />
                                           @error('slug')
                                           <p class="text-danger">{{$message}}</p>

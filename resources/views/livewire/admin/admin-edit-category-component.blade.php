@@ -53,7 +53,7 @@
                                           <p class="text-danger">{{$message}}</p>
                                           @enderror
                                      </div>
-                                    <button type="submit" class="btn btn-primary float-end">Add Category</button>
+                                    <button type="submit" class="btn btn-primary float-end">Edit Category</button>
                                 </form>
                             </div>
                       </div>
