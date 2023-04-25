@@ -115,7 +115,7 @@
                                 </div>
                                 <div class="product-content-wrap">
                                     <div class="product-category">
-                                        <a href="#">{{$product->category->name}}</a>
+                                        <a href="{{route('product.details',['slug'=>$product->slug])}}">{{$product->category->name}}</a>
                                     </div>
                                     <h2><a href="product-details.html">{{$product->name}}</a></h2>
                                     <div class="rating-result" title="90%">
@@ -124,7 +124,12 @@
                                         </span>
                                     </div>
                                     <div class="product-price">
-                                        <span>${{$product->sale_price}} </span>
+
+                                        @if($product->sale_price>1000)
+                                        <span>L.L{{$product->sale_price}}  </span>
+                                      @else
+                                         <span>${{$product->sale_price}}  </span>
+                                     @endif
                                       {{--  <span class="old-price">{{$product->price}}</span> --}}
                                      </div>
                                     <div class="product-action-1 show">

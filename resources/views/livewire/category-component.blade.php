@@ -103,14 +103,18 @@
                                     <div class="product-category">
                                         <a href="shop.html">Music</a>
                                     </div>
-                                    <h2><a href="product-details.html">{{$product->name}}</a></h2>
+                                    <h2><a href="{{route('product.details',['slug'=>$product->slug])}}">{{$product->name}}</a></h2>
                                     <div class="rating-result" title="90%">
                                         <span>
                                             <span>90%</span>
                                         </span>
                                     </div>
                                     <div class="product-price">
-                                        <span>${{$product->sale_price}} </span>
+                                        @if($product->sale_price>1000)
+                                        <span>L.L{{$product->sale_price}}  </span>
+                                      @else
+                                         <span>${{$product->sale_price}}  </span>
+                                     @endif
                                       {{--  <span class="old-price">{{$product->price}}</span> --}}
                                      </div>
                                     <div class="product-action-1 show">

@@ -111,7 +111,12 @@
                                         </span>
                                     </div>
                                     <div class="product-price">
-                                        <span>${{$product->sale_price}} </span>
+                                        @if($product->sale_price>1000)
+                                        <span>L.L{{$product->sale_price}}  </span>
+                                      @else
+                                         <span>${{$product->sale_price}}  </span>
+                                     @endif
+
                                       {{--  <span class="old-price">{{$product->price}}</span> --}}
                                      </div>
                                     <div class="product-action-1 show">
