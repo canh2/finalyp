@@ -13,9 +13,9 @@
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 mb-sm-15">
-                        <div class="toggle_info">
+                        {{-- <div class="toggle_info">
                             <span><i class="fi-rs-user mr-10"></i><span class="text-muted">Already have an account?</span> <a href="#loginform" data-bs-toggle="collapse" class="collapsed" aria-expanded="false">Click here to login</a></span>
-                        </div>
+                        </div> --}}
                         <div class="panel-collapse collapse login_form" id="loginform">
                             <div class="panel-body">
                                 <p class="mb-30 font-sm">If you have shopped with us before, please enter your details below. If you are a new customer, please proceed to the Billing &amp; Shipping section.</p>
@@ -43,9 +43,9 @@
                         </div>
                     </div>
                     <div class="col-lg-6">
-                        <div class="toggle_info">
+                        {{-- <div class="toggle_info">
                             <span><i class="fi-rs-label mr-10"></i><span class="text-muted">Have a coupon?</span> <a href="#coupon" data-bs-toggle="collapse" class="collapsed" aria-expanded="false">Click here to enter your code</a></span>
-                        </div>
+                        </div> --}}
                         <div class="panel-collapse collapse coupon_form " id="coupon">
                             <div class="panel-body">
                                 <p class="mb-30 font-sm">If you have a coupon code, please apply it below.</p>
@@ -673,30 +673,27 @@
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        < @foreach(Cart::instance('cart')->content() as $item)
                                         <tr>
-                                            <td class="image product-thumbnail"><img src="{{asset('assets/imgs/shop/product-1-1.jpg')}}" alt="#"></td>
-                                            <td>
-                                                <h5><a href="product-details.html">Yidarton Women Summer Blue</a></h5> <span class="product-qty">x 2</span>
+                                            <td class="image product-thumbnail"><img src="{{asset('assets/imgs/products')}}/{{$item->model->image}}" alt="#"></td>
+                                            <td class="product-des product-name">
+                                                <h5 class="product-name"><a href="product-details.html">{{$item->model->name}}</a></h5>
+                                              {{--  <p class="font-xs">Maboriosam in a tonto nesciung eget<br> distingy magndapibus.
+                                                </p>--}}
                                             </td>
-                                            <td>$180.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="image product-thumbnail"><img src="{{asset('assets/imgs/shop/product-2-1.jpg')}}" alt="#"></td>
-                                            <td>
-                                                <h5><a href="product-details.html">LDB MOON Women Summe</a></h5> <span class="product-qty">x 1</span>
-                                            </td>
-                                            <td>$65.00</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="image product-thumbnail"><img src="{{asset('assets/imgs/shop/product-3-1.jpg')}}" alt="#"></td>
-                                            <td><i class="ti-check-box font-small text-muted mr-10"></i>
-                                                <h5><a href="product-details.html">Women's Short Sleeve Loose</a></h5> <span class="product-qty">x 1</span>
-                                            </td>
-                                            <td>$35.00</td>
-                                        </tr>
+                                            @if($item->model->sale_price>1000)
+
+                                            <td class="price" data-title="Price"><span>${{ $item->model->sale_price/100000 }} </span></td>
+                                          @else
+                                              <td class="price" data-title="Price"><span>${{$item->model->sale_price}} </span></td>
+                                         @endif
+
+
+                                          @endforeach
+
                                         <tr>
                                             <th>SubTotal</th>
-                                            <td class="product-subtotal" colspan="2">$280.00</td>
+                                            <td class="product-subtotal" colspan="2">${{Cart::subtotal()}}</td>
                                         </tr>
                                         <tr>
                                             <th>Shipping</th>
@@ -704,7 +701,7 @@
                                         </tr>
                                         <tr>
                                             <th>Total</th>
-                                            <td colspan="2" class="product-subtotal"><span class="font-xl text-brand fw-900">$280.00</span></td>
+                                            <td colspan="2" class="product-subtotal"><span class="font-xl text-brand fw-900">${{Cart::total()}}</span></td>
                                         </tr>
                                     </tbody>
                                 </table>

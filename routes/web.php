@@ -4,6 +4,7 @@ use App\Models\Product;
 use App\Http\Livewire\CartComponent;
 use App\Http\Livewire\HomeComponent;
 use App\Http\Livewire\ShopComponent;
+use App\Http\Livewire\AboutComponent;
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\SearchComponent;
 use App\Http\Livewire\DetailsComponent;
@@ -54,6 +55,7 @@ Route::get('/product-category/{slug}' , CategoryComponent::class)->name('product
 
 Route::get('/search',SearchComponent::class)->name('product.search');
 
+Route::get('/about',AboutComponent::class)->name('about');
 
 // Route::get('/dashboard', function () {
 //     return view('dashboard');

@@ -23,44 +23,29 @@
                                             <figure class="border-radius-10">
                                                 <img src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="product image">
                                             </figure>
-                                            <figure class="border-radius-10">
-                                                <img src=" {{ asset('assets/imgs/shop/product-16-1.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src=" {{ asset('assets/imgs/shop/product-16-3.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src=" {{ asset('assets/imgs/shop/product-16-4.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src=" {{ asset('assets/imgs/shop/product-16-5.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src=" {{ asset('assets/imgs/shop/product-16-6.jpg')}}" alt="product image">
-                                            </figure>
-                                            <figure class="border-radius-10">
-                                                <img src=" {{ asset('assets/imgs/shop/product-16-7.jpg')}}" alt="product image">
-                                            </figure>
+
+
                                         </div>
                                         <!-- THUMBNAILS -->
-                                        <div class="slider-nav-thumbnails pl-15 pr-15">
-                                            <div><img src=" {{ asset('assets/imgs/shop/thumbnail-3.jpg')}}" alt="product image"></div>
-                                            <div><img src=" {{ asset('assets/imgs/shop/thumbnail-4.jpg')}}" alt="product image"></div>
-                                            <div><img src=" {{ asset('assets/imgs/shop/thumbnail-5.jpg')}}" alt="product image"></div>
-                                            <div><img src=" {{ asset('assets/imgs/shop/thumbnail-6.jpg')}}" alt="product image"></div>
-                                            <div><img src=" {{ asset('assets/imgs/shop/thumbnail-7.jpg')}}" alt="product image"></div>
+                                       <div class="slider-nav-thumbnails pl-15 pr-15">
+                                            {{-- <div><img src=" {{ asset('assets/products/gm2.jpg')}}" alt="product image"></div>
+                                            <div><img src=" {{ asset('assets/products/hh.jpg')}}" alt="product image"></div>
+                                            <div><img src=" {{ asset('assets/products/jm.jpg')}}" alt="product image"></div>
+                                            <div><img src=" {{ asset('assets/products/mz2a.jpg')}}" alt="product image"></div> --}}
+                                            {{-- <div><img src=" {{ asset('assets/imgs/shop/thumbnail-7.jpg')}}" alt="product image"></div>
                                             <div><img src=" {{ asset('assets/imgs/shop/thumbnail-8.jpg')}}" alt="product image"></div>
-                                            <div><img src=" {{ asset('assets/imgs/shop/thumbnail-9.jpg')}}" alt="product image"></div>
+                                            <div><img src=" {{ asset('assets/imgs/shop/thumbnail-9.jpg')}}" alt="product image"></div> --}}
                                         </div>
                                     </div>
                                     <!-- End Gallery -->
                                     <div class="social-icons single-share">
-                                        <ul class="text-grey-5 d-inline-block">
+                                      <ul class="text-grey-5 d-inline-block">
                                             <li><strong class="mr-10">Share this:</strong></li>
-                                            <li class="social-facebook"><a href="#"><img src=" {{ asset('assets/imgs/theme/icons/icon-facebook.svg')}}" alt=""></a></li>
-                                            <li class="social-twitter"> <a href="#"><img src=" {{ asset('assets/imgs/theme/icons/icon-twitter.svg')}}" alt=""></a></li>
-                                            <li class="social-instagram"><a href="#"><img src=" {{ asset('assets/imgs/theme/icons/icon-instagram.svg')}}" alt=""></a></li>
-                                            <li class="social-linkedin"><a href="#"><img src=" {{ asset('assets/imgs/theme/icons/icon-pinterest.svg')}}" alt=""></a></li>
+                                            <li class="social-facebook"><a href="https://www.facebook.com/ALSULTANHOOKAH.1?mibextid=ZbWKwL"><img src=" {{ asset('assets/imgs/theme/icons/icon-facebook.svg')}}" alt=""></a></li>
+                                            {{-- <li class="social-twitter"> <a href="#"><img src=" {{ asset('assets/imgs/theme/icons/icon-twitter.svg')}}" alt=""></a></li> --}}
+                                            <li class="social-instagram"><a href="https://www.instagram.com/alsultan_hookah_official/"><img src=" {{ asset('assets/imgs/theme/icons/icon-instagram.svg')}}" alt=""></a></li>
+                                            {{-- <li class="social-linkedin"><a href="#"><img src=" {{ asset('assets/imgs/theme/icons/icon-pinterest.svg')}}" alt=""></a></li> --}}
+
                                         </ul>
                                     </div>
                                 </div>
@@ -443,8 +428,8 @@
                                                 <div class="product-img-action-wrap">
                                                     <div class="product-img product-img-zoom">
                                                         <a href="{{route('product.details',['slug'=>$rproduct->slug])}}" tabindex="0">
-                                                            <img class="default-img" src="{{asset('assets/imgs/shop/product-')}}{{$rproduct->id}}-1.jpg" alt="{{$rproduct->name}}">
-                                                            <img class="hover-img" src="{{asset('assets/imgs/shop/product-2-2.jpg')}}" alt="">
+                                                            <img class="default-img" src="{{asset('assets/imgs/products')}}/{{$rproduct->image}}" alt="{{$rproduct->name}}">
+                                                            <img class="hover-img" src="{{asset('assets/imgs/products')}}/{{$rproduct->image}}" alt="">
                                                         </a>
                                                     </div>
                                                     <div class="product-action-1">
@@ -457,13 +442,20 @@
                                                     </div>
                                                 </div>
                                                 <div class="product-content-wrap">
+
                                                     <h2><a href="product-details.html" tabindex="0">{{$rproduct->name}}</a></h2>
+
                                                     <div class="rating-result" title="90%">
                                                         <span>
                                                         </span>
                                                     </div>
                                                     <div class="product-price">
-                                                        <span>${{$rproduct->sale_price}} </span>
+                                                        @if($rproduct->sale_price>1000)
+                                                        <p class="price mb-0 mt-5">L.L{{$rproduct->sale_price}}</p>
+                                                        @else
+                                                        <p class="price mb-0 mt-5">${{$rproduct->sale_price}}</p>
+                                                        @endif
+
                                                       {{-- <span class="old-price">$245.8</span> --}}
                                                     </div>
                                                 </div>
@@ -506,32 +498,9 @@
                                 </div>
                             </div>
                             <div class="list-group">
-                                <div class="list-group-item mb-10 mt-10">
-                                    <label class="fw-900">Color</label>
-                                    <div class="custome-checkbox">
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox1" value="">
-                                        <label class="form-check-label" for="exampleCheckbox1"><span>Red (56)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox2" value="">
-                                        <label class="form-check-label" for="exampleCheckbox2"><span>Green (78)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox3" value="">
-                                        <label class="form-check-label" for="exampleCheckbox3"><span>Blue (54)</span></label>
-                                    </div>
-                                    <label class="fw-900 mt-15">Item Condition</label>
-                                    <div class="custome-checkbox">
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox11" value="">
-                                        <label class="form-check-label" for="exampleCheckbox11"><span>New (1506)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox21" value="">
-                                        <label class="form-check-label" for="exampleCheckbox21"><span>Refurbished (27)</span></label>
-                                        <br>
-                                        <input class="form-check-input" type="checkbox" name="checkbox" id="exampleCheckbox31" value="">
-                                        <label class="form-check-label" for="exampleCheckbox31"><span>Used (45)</span></label>
-                                    </div>
-                                </div>
+
                             </div>
-                            <a href="shop.html" class="btn btn-sm btn-default"><i class="fi-rs-filter mr-5"></i> Fillter</a>
+                            <a href="shop.html" ><i ></i> </a>
                         </div>
                         <!-- Product sidebar Widget -->
                         <div class="sidebar-widget product-sidebar  mb-30 p-30 bg-grey border-radius-10">
@@ -542,11 +511,15 @@
                             @foreach($nproducts as $nproduct)
                             <div class="single-post clearfix">
                                 <div class="image">
-                                    <img src=" {{ asset('assets/imgs/shop/thumbnail-')}}{{$nproduct->id}}.jpg" alt="{{$nproduct->name}}">
+                                    <img src=" {{asset('assets/imgs/products')}}/{{$nproduct->image}}" alt="{{$nproduct->name}}">
                                 </div>
                                 <div class="content pt-10">
                                     <h5><a href="{{route('product.details',['slug'=>$nproduct->slug])}}">{{$nproduct->name}}</a></h5>
-                                    <p class="price mb-0 mt-5">{{$nproduct->sale_price}}</p>
+                                    @if($nproduct->sale_price>1000)
+                                    <p class="price mb-0 mt-5">L.L{{$nproduct->sale_price}}</p>
+                                    @else
+                                    <p class="price mb-0 mt-5">${{$nproduct->sale_price}}</p>
+                                    @endif
                                     <div class="product-rate">
                                         <div class="product-rating" style="width:90%"></div>
                                     </div>
