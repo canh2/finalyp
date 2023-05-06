@@ -22,9 +22,7 @@
                            </span>${{$item->model->sale_price}}</h4>
                          @endif
                     </div>
-                 {{--   <div class="shopping-cart-delete">
-                        <a href="#"><i class="fi-rs-cross-small"></i></a>
-                    </div>--}}
+
                 </li>
                 @endforeach
             </ul>

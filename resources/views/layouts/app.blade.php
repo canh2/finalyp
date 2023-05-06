@@ -167,67 +167,12 @@
                             </nav>
                         </div>
                     </div>
-                    {{-- <div class="hotline d-none d-lg-block">
-                        <p><i class="fi-rs-smartphone"></i><span>Contact</span> (+961) 70 066 693 </p>
-                    </div> --}}
+
                     <p class="mobile-promotion">Happy <span class="text-brand">Happy holidays</span>. Big Sale Up to 40%</p>
-                    {{-- <div class="header-action-right d-block d-lg-none">
-                        <div class="header-action-2">
-                            <div class="header-action-icon-2">
-                                <a href="shop-wishlist.php">
-                                    <img alt="Surfside Media" src="{{asset('assets/imgs/theme/icons/icon-heart.svg')}}">
-                                    <span class="pro-count white">4</span>
-                                </a>
-                            </div>
-                            <div class="header-action-icon-2">
-                                <a class="mini-cart-icon" href="cart.html">
-                                    <img alt="Surfside Media" src="{{asset('assets/imgs/theme/icons/icon-cart.svg')}}">
-                                    <span class="pro-count white">2</span>
-                                </a>
-                                {{-- <div class="cart-dropdown-wrap cart-dropdown-hm2">
-                                    <ul>
-                                        <li>
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt="Surfside Media" src="{{asset('assets/imgs/shop/thumbnail-3')}}.jpg"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">Plain Striola Shirts</a></h4>
-                                                <h3><span>1 × </span>$800.00</h3>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                            </div>
-                                        </li>
-                                        <li>
-                                            <div class="shopping-cart-img">
-                                                <a href="#"><img alt="Surfside Media" src="{{asset('assets/imgs/shop/thumbnail-4')}}.jpg"></a>
-                                            </div>
-                                            <div class="shopping-cart-title">
-                                                <h4><a href="#">Macbook Pro 2022</a></h4>
-                                                <h3><span>1 × </span>$3500.00</h3>
-                                            </div>
-                                            <div class="shopping-cart-delete">
-                                                <a href="#"><i class="fi-rs-cross-small"></i></a>
-                                            </div>
-                                        </li>
-                                    </ul>
-                                    <div class="shopping-cart-footer">
-                                        <div class="shopping-cart-total">
-                                            <h4>Total <span>$383.00</span></h4>
-                                        </div>
-                                        <div class="shopping-cart-button">
-                                            <a href="cart.html">View cart</a>
-                                            <a href="shop-checkout.php">Checkout</a>
-                                        </div>
-                                    </div>
-                                </div> --}}
+
                             </div>
                             <div class="header-action-icon-2 d-block d-lg-none">
-                                {{-- <div class="burger-icon burger-icon-white">
-                                    <span class="burger-icon-top"></span>
-                                    <span class="burger-icon-mid"></span>
-                                    <span class="burger-icon-bottom"></span>
-                                </div> --}}
+
                             </div>
                         </div>
                     </div>
@@ -255,62 +200,12 @@
                         <button type="submit"><i class="fi-rs-search"></i></button>
                     </form>
                 </div>
-                {{-- <div class="mobile-menu-wrap mobile-header-border">
-                    <div class="main-categori-wrap mobile-header-border">
-                        <a class="categori-button-active-2" href="#">
-                            <span class="fi-rs-apps"></span> Browse Categories
-                        </a>
-                        <div class="categori-dropdown-wrap categori-dropdown-active-small">
-                            <ul>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-dress"></i>Women's Clothing</a></li>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-tshirt"></i>Men's Clothing</a></li>
-                                <li> <a href="shop.html"><i class="surfsidemedia-font-smartphone"></i> Cellphones</a></li>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-desktop"></i>Computer & Office</a></li>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-cpu"></i>Consumer Electronics</a></li>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-home"></i>Home & Garden</a></li>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-high-heels"></i>Shoes</a></li>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-teddy-bear"></i>Mother & Kids</a></li>
-                                <li><a href="shop.html"><i class="surfsidemedia-font-kite"></i>Outdoor fun</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <!-- mobile menu start -->
-                    <nav>
-                        <ul class="mobile-menu">
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="index.html">Home</a></li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="shop.html">shop</a></li>
-                            <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Our Products</a>
-                                <ul class="dropdown">
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Hookah</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">Hookah</a></li>
-                                            <li><a href="#">Hose</a></li>
-                                            <li><a href="#">shisha bowl</a></li>
-                                            <li><a href="#">shisha glass</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Tobacco</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">shisha Maasal</a></li>
-                                            <li><a href="#">Cigarettes</a></li>
-                                            <li><a href="#">Vapes</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item-has-children"><span class="menu-expand"></span><a href="#">Alcohol</a>
-                                        <ul class="dropdown">
-                                            <li><a href="#">alcohol</a></li>
-                                            {{-- <li><a href="#"></a></li>
-                                            <li><a href="#">Tablets</a></li>
-                                            <li><a href="#">Laptop Accessories</a></li>
-                                            <li><a href="#">Tablet Accessories</a></li> --}}
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
+
+
 
 
                     </nav>
-                    <!-- mobile menu end -->
+
                 </div> --}}
                 <div class="mobile-header-info-wrap mobile-header-border">
                     <div class="single-mobile-header-info mt-30">
@@ -326,14 +221,7 @@
                         <a href="#">(+961) 70 066 693 </a>
                     </div>
                 </div>
-                {{-- <div class="mobile-social-icon">
-                    <h5 class="mb-15 text-grey-4">Follow Us</h5>
-                    <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-facebook.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-twitter.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-instagram.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-pinterest.svg')}}" alt=""></a>
-                    <a href="#"><img src="{{asset('assets/imgs/theme/icons/icon-youtube.svg')}}" alt=""></a>
-                </div> --}}
+
             </div>
         </div>
     </div>

@@ -103,12 +103,7 @@
                                             <img class="hover-img"  src="{{asset('assets/imgs/products')}}/{{$product->image}}" alt="{{$product->name}}">
                                         </a>
                                     </div>
-                                    {{-- <div class="product-action-1">
-                                        <a aria-label="Quick view" class="action-btn hover-up" data-bs-toggle="modal" data-bs-target="#quickViewModal">
-                                            <i class="fi-rs-search"></i></a>
-                                        <a aria-label="Add To Wishlist" class="action-btn hover-up" href="wishlist.php"><i class="fi-rs-heart"></i></a>
-                                        <a aria-label="Compare" class="action-btn hover-up" href="compare.php"><i class="fi-rs-shuffle"></i></a>
-                                    </div> --}}
+
                                     <div class="product-badges product-badges-position product-badges-mrg">
                                         <span class="hot">Hot</span>
                                     </div>
@@ -129,7 +124,7 @@
                                       @else
                                          <span>${{$product->sale_price}}  </span>
                                      @endif
-                                      {{--  <span class="old-price">{{$product->price}}</span> --}}
+
                                     </div>
                                       <div class="product-action-1 show">
                                         @if($witems->contains($product->id))
@@ -146,19 +141,10 @@
                         </div>
                        @endforeach
                     </div>
-                    <!--pagination-->
+
                     <div class="pagination-area mt-15 mb-sm-5 mb-lg-0">
                         {{$products->links()}}
-                     {{--   <nav aria-label="Page navigation example">
-                            <ul class="pagination justify-content-start">
-                                <li class="page-item active"><a class="page-link" href="#">01</a></li>
-                                <li class="page-item"><a class="page-link" href="#">02</a></li>
-                                <li class="page-item"><a class="page-link" href="#">03</a></li>
-                                <li class="page-item"><a class="page-link dot" href="#">...</a></li>
-                                <li class="page-item"><a class="page-link" href="#">16</a></li>
-                                <li class="page-item"><a class="page-link" href="#"><i class="fi-rs-angle-double-small-right"></i></a></li>
-                            </ul>
-                        </nav>--}}
+
                     </div>
                 </div>
                 <div class="col-lg-3 primary-sidebar sticky-sidebar">

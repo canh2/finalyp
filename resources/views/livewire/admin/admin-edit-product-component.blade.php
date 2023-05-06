@@ -76,13 +76,7 @@
                                         @enderror
                                    </div>
 
-                                   {{-- <div class="mb-3 mt-3">
-                                        <label for="discounted_price" class="form-label">Discounted Price</label>
-                                        <input type="text"  name="slug" class="form-control" placeholder="Enter Product discounted price"  wire:model="discounted_price" />
-                                        @error('discounted_price')
-                                        <p class="text-danger">{{$message}}</p>
-                                        @enderror
-                                   </div> --}}
+
                                    <div class="mb-3 mt-3">
                                             <label for="sku" class="form-label">SKU</label>
                                             <input type="text"  name="slug" class="form-control" placeholder="Enter Category sku"  wire:model="sku" />
